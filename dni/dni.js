@@ -44,19 +44,19 @@ function validarDni()
     let letra_dni = obtenerLetraUsuario ();
     console.log ("Letra introducida " + letra_dni);
 
-    // switch (numero_dni[0].toUpperCase())
-    // {
-    //     // Convertimos la letra del DNI extranjero en número
-    //     case X:
-    //         numero_dni[0] = 0;
-    //         break;
-    //     case Y:
-    //         numero_dni[0] = 1;
-    //         break;
-    //     case Z:
-    //         numero_dni[0] = 2;
-    //         break;
-    // }
+    switch (numero_dni[0].toUpperCase())
+    {
+        // Convertimos la letra del DNI extranjero en número
+        case "X":
+            numero_dni[0] = 0;
+            break;
+        case "Y":
+            numero_dni[0] = 1;
+            break;
+        case "Z":
+            numero_dni[0] = 2;
+            break;
+    }
 
     let resultado = calcularLetraDniUsuario(numero_dni);
     if (resultado == letra_dni)
